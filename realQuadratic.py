@@ -1,9 +1,6 @@
 # realQuadratic.py
 # Copyright (c) 2020 Drew Markel
 
-# Import math packages
-from math import pow
-
 # Create "realQuadratic" class
 class realQuadratic:
 
@@ -16,7 +13,7 @@ class realQuadratic:
         # Take the "opposite" of variableB
         self.inverseB = (-variableB)
         # Calculate the discriminant
-        self.discriminant = (pow(variableB, 2) - (4 * variableA * variableC))
+        self.discriminant = ((variableB ** 2) - (4 * variableA * variableC))
         # Calculate the denominator
         self.denominator = (2 * variableA)
 

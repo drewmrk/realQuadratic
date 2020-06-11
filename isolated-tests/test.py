@@ -52,7 +52,26 @@ def complexSolutions():
         print('---------------------------------------')
         assert False
 
+# Complex Variables
+# Should print two complex solutions
+def complexVariables():
+    print('Complex Variables')
+    equation = realQuadratic(1j, 1j, 1j)
+    if (equation.solution(1) == -0.5+0.8660254037844386j) and (equation.solution(2) == -0.5-0.8660254037844386j):
+        print(equation.solution(1))
+        print(equation.solution(2))
+        print('PASS')
+        print('---------------------------------------')
+        assert True
+    else:
+        print(equation.solution(1))
+        print(equation.solution(2))
+        print('FAIL')
+        print('---------------------------------------')
+        assert False
+
 # Execute functions
 zeroA()
 realSolutions()
 complexSolutions()
+complexVariables()

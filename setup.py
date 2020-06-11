@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='realQuadratic',
-    version='0.1',
+    version='0.0.2',
     description='A real, 3 variable professional quadratic equation solver.',
     long_description='A real, 3 variable professional quadratic equation solver.',
     url='https://github.com/drewmrk/realQuadratic',
