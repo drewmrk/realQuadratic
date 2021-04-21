@@ -11,7 +11,7 @@ realQuadratic is a professional 3 variable quadratic equation solver.
 ```
 from realQuadratic import realQuadratic
 
-realQuadratic(A, B, C).solution(1|2)
+realQuadratic(A, B, C)
 ```
 
 ## Compiling
