@@ -1,34 +1,20 @@
 # realQuadratic.py
-# Copyright (c) 2020 Drew Markel
+# Copyright (c) 2020-2021 Drew Markel
 
-# Create "realQuadratic" class
-class realQuadratic:
 
-    # Grab variables
-    def __init__(self, variableA, variableB, variableC):
-        # Declare variables
-        self.variableA = variableA
-        self.variableB = variableB
-        self.variableC = variableC
-        # Take the "opposite" of variableB
-        self.inverseB = (-variableB)
-        # Calculate the discriminant
-        self.discriminant = ((variableB ** 2) - (4 * variableA * variableC))
-        # Calculate the denominator
-        self.denominator = (2 * variableA)
-
-    # Calculate solution(s)
-    def solution(self, number):
-        # Check to make sure A is not zero
-        if self.variableA == 0:
-            return "Error: Cannot divide by zero."
-        else:
-            # Return first solution
-            if number == 1:
-                return ((self.inverseB - (self.discriminant ** 0.5)) / self.denominator)
-            # Return second solution
-            elif number == 2:
-                return ((self.inverseB + (self.discriminant ** 0.5)) / self.denominator)
-            # Return if the program failed
-            else:
-                return "An unknown error occurred."
+def realQuadratic(variableA=1, variableB=1, variableC=1) -> tuple:
+    """
+    Calculates solutions for a quadratic formula
+    variableA: Ax^2 (int|float|complex)
+    variableB: Bx (int|float|complex)
+    variableC: C (int|float|complex)
+    """
+    inverseB = (-variableB)
+    discriminant = ((variableB**2) - (4 * variableA * variableC))
+    denominator = (2 * variableA)
+    if variableA == 0:
+        raise ZeroDivisionError
+    else:
+        solutionA = ((inverseB - (discriminant**0.5)) / denominator)
+        solutionB = ((inverseB + (discriminant**0.5)) / denominator)
+        return solutionA, solutionB
